@@ -1,0 +1,93 @@
+Index: lib/main.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/main.dart b/lib/main.dart
+--- a/lib/main.dart	
++++ b/lib/main.dart	(date 1718383230695)
+@@ -1,6 +1,5 @@
+ import 'package:flutter/material.dart';
+ import 'Splashscreen.dart';
+-import 'loginpage.dart';
+ 
+ void main() {
+   runApp(const MyApp());
+@@ -11,7 +10,7 @@
+ 
+   @override
+   Widget build(BuildContext context) {
+-    return MaterialApp(
++    return const MaterialApp(
+       home: Firstscreen(),
+     );
+   }
+Index: lib/Splashscreen.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/Splashscreen.dart b/lib/Splashscreen.dart
+--- a/lib/Splashscreen.dart	
++++ b/lib/Splashscreen.dart	(date 1718389222881)
+@@ -1,5 +1,5 @@
+ import 'package:flutter/material.dart';
+-import 'loginpage.dart';
++import 'Loginpage.dart';
+ 
+ class Firstscreen extends StatelessWidget {
+   const Firstscreen({super.key});
+@@ -28,7 +28,7 @@
+             child: ElevatedButton(
+                 onPressed: () {
+                   Navigator.push(context,
+-                      MaterialPageRoute(builder: (context) => loginpage.loginpage()));
++                      MaterialPageRoute(builder: (context) => Loginpage()));
+                 },
+                 child: const Text('next')),
+           )
+Index: lib/loginpage.dart
+===================================================================
+diff --git a/lib/loginpage.dart b/lib/loginpage.dart
+deleted file mode 100644
+--- a/lib/loginpage.dart	
++++ /dev/null	
+@@ -1,38 +0,0 @@
+-import 'package:flutter/material.dart';
+-
+-class loginpage extends StatelessWidget {
+-  const loginpage.loginpage({super.key});
+-
+-  @override
+-  Widget build(BuildContext context) {
+-    return MaterialApp(
+-      home: Scaffold(
+-        backgroundColor: Colors.white,
+-        body: SafeArea(
+-          child: Column(
+-            children: <Widget>[
+-              Container(
+-                width: 100.0,
+-                height: 100.0,
+-                color: Colors.cyan,
+-                child: Text('Container 1'),
+-              ),
+-              Container(
+-                width: 100.0,
+-                height: 100.0,
+-                color: Colors.blue,
+-                child: Text('Container 2'),
+-              ),
+-              Container(
+-                width: 100.0,
+-                height: 100.0,
+-                color: Colors.redAccent,
+-                child: const Text('Container 2'),
+-              ),
+-            ],
+-          ),
+-        ),
+-      ),
+-    );
+-  }
+-}
