@@ -30,7 +30,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   offsetX: -50, // Horizontal shift control
                   offsetY: 20, // Vertical shift control
                 ),
-                child: Container(
+                child: SizedBox(
                   height: 420,
                   width: double.infinity,
                   child: Stack(
@@ -135,7 +135,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
+                                builder: (context) => const HomeScreen()));
                       },
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.fromLTRB(80, 15, 80, 20),
@@ -154,14 +154,14 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                     const SizedBox(height: 20),
-                    CustomDivider(), // Custom Divider Widget
+                    const CustomDivider(), // Custom Divider Widget
                     const SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HomeScreen()));
+                                builder: (context) => const HomeScreen()));
                       },
                       style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.fromLTRB(80, 15, 80, 20),
@@ -187,6 +187,8 @@ class _SignInScreenState extends State<SignInScreen> {
 
 // Custom Divider Widget
 class CustomDivider extends StatelessWidget {
+  const CustomDivider({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const Row(
@@ -231,7 +233,7 @@ class OvalPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint()
-      ..color = const Color(0xFFE8235).withOpacity(0.77)
+      ..color = const Color(0x0ffe8235).withOpacity(0.77)
       ..style = PaintingStyle.fill;
 
     var borderPaint = Paint()

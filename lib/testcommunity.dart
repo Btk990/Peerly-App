@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'sessionscreen.dart';
 import 'homescreen.dart';
@@ -35,7 +34,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
       if (index == 0) {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
         );
       } else if (index == 1) {
         Navigator.push(
@@ -153,7 +152,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                       const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                   child: Column(
                     children: [
-                      PostCard(
+                      const PostCard(
                         avatar: 'images/user1.jpg',
                         username: 'Pigeon Car',
                         time: '3 hrs ago',
@@ -165,7 +164,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                         userCommented: false,
                       ),
                       Divider(color: Colors.grey[300], thickness: 1, height: 1),
-                      PostCard(
+                      const PostCard(
                         avatar: 'images/user2.jpg',
                         username: 'Pigeon Car',
                         time: '1 hr ago',
@@ -177,7 +176,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                         userCommented: false,
                       ),
                       Divider(color: Colors.grey[300], thickness: 1, height: 1),
-                      PostCard(
+                      const PostCard(
                         avatar: 'images/user3.jpg',
                         username: 'Pigeon Car',
                         time: '2 min ago',
@@ -189,7 +188,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                         userCommented: false,
                       ),
                       Divider(color: Colors.grey[300], thickness: 1, height: 1),
-                      PostCard(
+                      const PostCard(
                         avatar: 'images/user4.jpg',
                         username: 'Pigeon Car',
                         time: '3 hrs ago',
@@ -289,7 +288,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
               case 0:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
                 );
                 break;
               case 1:
@@ -303,7 +302,7 @@ class _CommunityScreenState extends State<CommunityScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => (ChatsScreen()),
+                      builder: (context) => (const ChatsScreen()),
                     ));
                 break;
               case 3:
@@ -329,11 +328,11 @@ class TabButton extends StatelessWidget {
   final double borderRadius;
 
   const TabButton({
-    Key? key,
+    super.key,
     required this.text,
     this.isSelected = false,
     this.borderRadius = 20.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -364,7 +363,7 @@ class PostCard extends StatelessWidget {
   final bool userLiked;
   final bool userCommented;
 
-  PostCard({
+  const PostCard({super.key, 
     required this.avatar,
     required this.username,
     required this.time,

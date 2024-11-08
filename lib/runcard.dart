@@ -220,7 +220,7 @@ class GreyedOutSessionCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -343,7 +343,7 @@ class AnotherGreyedOutSessionCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -466,7 +466,7 @@ class YetAnotherGreyedOutSessionCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(

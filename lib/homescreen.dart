@@ -1,12 +1,12 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:peerly/chatsscreen.dart';
 import 'package:peerly/communityscreen.dart';
 import 'package:peerly/sessionscreen.dart';
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,12 +14,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -200,11 +202,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(height: 20),
                   Column(
                     children: [
-                      SessionCard(),
+                      const SessionCard(),
                       const SizedBox(height: 20),
-                      OneononeCard(),
+                      const OneononeCard(),
                       const SizedBox(height: 10),
-                      Library(),
+                      const Library(),
                       const SizedBox(height: 10), // Adjust spacing as needed
                       Subscribe(
                         onPressed: () {
@@ -232,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
           elevation: 0,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50, // Reduced width
                 height: 50, // Reduced height
 
@@ -245,7 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50, // Reduced width
                 height: 50, // Reduced height
 
@@ -258,7 +260,7 @@ class _HomeScreenState extends State<HomeScreen> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50, // Reduced width
                 height: 50, // Reduced height
                 child: Image.asset(
@@ -326,7 +328,7 @@ class FeelingIcon extends StatelessWidget {
   final String label;
   final Color color;
 
-  const FeelingIcon({
+  const FeelingIcon({super.key, 
     required this.icon,
     required this.label,
     required this.color,
@@ -365,6 +367,8 @@ class FeelingIcon extends StatelessWidget {
 }
 
 class SessionCard extends StatelessWidget {
+  const SessionCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -434,6 +438,8 @@ class SessionCard extends StatelessWidget {
 }
 
 class OneononeCard extends StatelessWidget {
+  const OneononeCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -499,7 +505,7 @@ class OneononeCard extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 16),
-          Container(
+          SizedBox(
             width: 110,
             height: 110,
             child: Image.asset(
@@ -514,6 +520,8 @@ class OneononeCard extends StatelessWidget {
 }
 
 class Library extends StatelessWidget {
+  const Library({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -616,7 +624,7 @@ class Library extends StatelessWidget {
 class Subscribe extends StatelessWidget {
   final VoidCallback onPressed;
 
-  const Subscribe({required this.onPressed});
+  const Subscribe({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,5 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:peerly/homescreen.dart';
 import 'package:peerly/detailspage.dart';
 
 class loginpage extends StatelessWidget {
