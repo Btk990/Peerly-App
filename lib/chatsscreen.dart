@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'sessionscreen.dart';
 import 'homescreen.dart';
 import 'communityscreen.dart';
@@ -39,7 +37,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
       if (index == 0) {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
         );
       } else if (index == 1) {
         Navigator.push(
@@ -192,10 +190,10 @@ class _ChatsScreenState extends State<ChatsScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xFFFE8235),
-        child: const Icon(Icons.edit),
         foregroundColor: Colors.white,
         onPressed: () {},
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: const Icon(Icons.edit),
       ),
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
@@ -210,7 +208,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
           elevation: 0,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50,
                 height: 50,
                 child: Image.asset(
@@ -222,7 +220,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50,
                 height: 50,
                 child: Image.asset(
@@ -234,7 +232,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50,
                 height: 50,
                 child: Image.asset(
@@ -246,7 +244,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50,
                 height: 50,
                 child: Image.asset(
@@ -280,7 +278,7 @@ class ChatItem extends StatelessWidget {
   final bool isOrangeContainer;
 
   const ChatItem({
-    Key? key,
+    super.key,
     required this.name,
     required this.subtitle,
     required this.message,
@@ -288,7 +286,7 @@ class ChatItem extends StatelessWidget {
     required this.unreadCount,
     required this.image,
     required this.isOrangeContainer,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

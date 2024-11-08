@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Library(),
     );
   }
 }
 
 class Library extends StatelessWidget {
+  const Library({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -13,10 +13,10 @@ class _FirstscreenState extends State<Firstscreen> {
   void initState() {
     super.initState();
     // Delay for 3 seconds and then navigate to the login page
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => loginpage.loginpage()),
+        MaterialPageRoute(builder: (context) => const loginpage.loginpage()),
       );
     });
   }

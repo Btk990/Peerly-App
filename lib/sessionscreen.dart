@@ -38,19 +38,19 @@ class _SessionScreenState extends State<SessionScreen> {
       case 0:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
         );
         break;
       case 2:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ChatsScreen()),
+          MaterialPageRoute(builder: (context) => const ChatsScreen()),
         );
         break;
       case 3:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => CommunityScreen()),
+          MaterialPageRoute(builder: (context) => const CommunityScreen()),
         );
         break;
       default:
@@ -139,10 +139,10 @@ class _SessionScreenState extends State<SessionScreen> {
 
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
                   );
                 },
-                child: Container(
+                child: SizedBox(
                   width: 50,
                   height: 50,
                   child: Image.asset(
@@ -162,7 +162,7 @@ class _SessionScreenState extends State<SessionScreen> {
                   });
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SessionScreen()),
+                    MaterialPageRoute(builder: (context) => const SessionScreen()),
                   );
                 },
                 child: Container(
@@ -179,7 +179,7 @@ class _SessionScreenState extends State<SessionScreen> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50,
                 height: 50,
                 child: Image.asset(
@@ -191,7 +191,7 @@ class _SessionScreenState extends State<SessionScreen> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(
+              icon: SizedBox(
                 width: 50,
                 height: 50,
                 child: Image.asset(
@@ -422,7 +422,7 @@ class GreyedOutSessionCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -549,7 +549,7 @@ class AnotherGreyedOutSessionCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -676,7 +676,7 @@ class YetAnotherGreyedOutSessionCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(

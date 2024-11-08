@@ -103,6 +103,8 @@ class SessionCard extends StatelessWidget {
 }
 
 class OneCard extends StatelessWidget {
+  const OneCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -162,6 +164,8 @@ class OneCard extends StatelessWidget {
 }
 
 class SessionCard2 extends StatelessWidget {
+  const SessionCard2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -299,13 +303,15 @@ class SessionCard2 extends StatelessWidget {
 }
 
 class GreyedOutSessionCard extends StatelessWidget {
+  const GreyedOutSessionCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -420,13 +426,15 @@ class GreyedOutSessionCard extends StatelessWidget {
 }
 
 class AnotherGreyedOutSessionCard extends StatelessWidget {
+  const AnotherGreyedOutSessionCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
@@ -541,13 +549,15 @@ class AnotherGreyedOutSessionCard extends StatelessWidget {
 }
 
 class YetAnotherGreyedOutSessionCard extends StatelessWidget {
+  const YetAnotherGreyedOutSessionCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width - 30,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: const Color(0xff80EFEEEE),
+        color: const Color(0xff80efeeee),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(

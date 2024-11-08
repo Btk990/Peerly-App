@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:peerly/homescreen.dart';
 
 import 'Splashscreen.dart';
 
