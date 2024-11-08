@@ -1,6 +1,6 @@
 # peerly
 
-A new Flutter project.
+Peerly is a mental health platform that support students struggling with mental health issues. The app aims to create a safe and accessible space where users can connect with peer counselors and mental health professionals. The platform is designed to bridge the gap between students and the help they need, especially for those who might find it hard to speak up about their struggles..
 
 ## Getting Started
 
